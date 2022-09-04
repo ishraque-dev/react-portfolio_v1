@@ -12,6 +12,24 @@
     padding: 2vh 0;
     pointer-events: none;
   }
+
+  .cursor1 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    left: 0;
+    z-index: 4;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    background: #ffd600;
+    transition: 0.3s;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 }
 
 .app__whitebg {

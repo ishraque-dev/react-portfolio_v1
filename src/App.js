@@ -13,6 +13,8 @@ const App = () => {
 
   // Ref for parent div and scrolling div
   const app = useRef();
+
+  const cursor1Ref = useRef();
   const scrollContainer = useRef();
 
   // Configs
@@ -61,8 +63,15 @@ const App = () => {
     //loop vai raf
     requestAnimationFrame(() => skewScrolling());
   };
+  // ==================================
+  // cursor animations
+  document.addEventListener('mousemove', (e) => {
+    cursor1Ref.current.style.left = `${e.clientX}px`;
+    cursor1Ref.current.style.top = `${e.clientY}px`;
+  });
   return (
     <div ref={app} className="app">
+      <span ref={cursor1Ref} className="cursor1"></span>
       <Navbar />
       <div ref={scrollContainer} className="scroll-container">
         <Header />
