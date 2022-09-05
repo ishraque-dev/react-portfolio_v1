@@ -20,6 +20,7 @@
   scroll-behavior: none;
   font-family: 'Poppins', sans-serif;
   /* overflow: hidden; */
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   display: none;
