@@ -33,7 +33,9 @@ const Header = () => {
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Full Stack Software Developer</p>
+            <p className="p-text" style={{ textAlign: 'center' }}>
+              Full Stack Software Developer
+            </p>
 
             {/* <p className="p-text">Hello I am</p> */}
           </div>
