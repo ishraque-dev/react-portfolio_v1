@@ -65,10 +65,12 @@ const App = () => {
   };
   // ==================================
   // cursor animations
+
   document.addEventListener('mousemove', (e) => {
-    cursor1Ref.current.style.left = `${e.clientX}px`;
-    cursor1Ref.current.style.top = `${e.clientY}px`;
+    document.querySelector('.cursor1').style.left = `${e.clientX}px`;
+    document.querySelector('.cursor1').style.top = `${e.clientY}px`;
   });
+
   return (
     <div ref={app} className="app">
       <span ref={cursor1Ref} className="cursor1"></span>
