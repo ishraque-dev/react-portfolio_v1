@@ -11,6 +11,7 @@
   --brown-color: #46364a;
   --white-color: #ffffff;
   --black-color: #030303;
+  --primary-gradient: (linear-gradient(to left, #0860cc, #be169d));
 }
 
 * {
