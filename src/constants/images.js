@@ -35,7 +35,7 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import Ishraque from '../assets/Ishraque.png';
-export default {
+const images = {
   Ishraque,
   email,
   mobile,
@@ -71,3 +71,4 @@ export default {
   skype,
   spotify,
 };
+export default images;
