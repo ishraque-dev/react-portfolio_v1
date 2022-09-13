@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import About from './container/About/About';
 import Footer from './container/Footer/Footer';
 import Header from './container/Header/Header';
@@ -81,12 +81,12 @@ const App = () => {
       <span ref={cursor1Ref} className="cursor1"></span>
       <Navbar />
       {/* <div ref={scrollContainer} className="scroll-container"> */}
-        <Header />
-        <About />
-        <Works />
-        <Skills />
-        <Testimonial />
-        <Footer />
+      <Header />
+      <About />
+      <Works />
+      <Skills />
+      <Testimonial />
+      <Footer />
       {/* </div> */}
     </div>
   );
