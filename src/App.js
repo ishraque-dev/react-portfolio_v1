@@ -26,14 +26,6 @@ const App = () => {
   };
 
   // Run scrollrender once page is loaded.
-  useEffect(() => {
-    requestAnimationFrame(() => skewScrolling());
-  }, []);
-
-  //set the height of the body.
-  useEffect(() => {
-    setBodyHeight();
-  }, [size.height]);
 
   //Set the height of the body to the height of the scrolling div
   const setBodyHeight = () => {
@@ -41,6 +33,16 @@ const App = () => {
       scrollContainer.current.getBoundingClientRect().height
     }px`;
   };
+  //set the height of the body.
+  useEffect(() => {
+    setInterval(() => {
+      setBodyHeight();
+    }, 1000);
+    return () => {
+      setBodyHeight();
+      clearInterval(setInterval);
+    };
+  }, []);
 
   // Scrolling
   const skewScrolling = () => {
@@ -63,6 +65,9 @@ const App = () => {
     //loop vai raf
     requestAnimationFrame(() => skewScrolling());
   };
+
+  requestAnimationFrame(() => skewScrolling());
+
   // ==================================
   // cursor animations
 

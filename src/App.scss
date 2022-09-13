@@ -1,15 +1,12 @@
 .app {
-  position: fixed;
   background-color: var(--primary-color);
   font-family: var(--font-base);
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
-
+  position: fixed;
   .scroll {
-    padding: 2vh 0;
+    // padding: 2vh 0;
     pointer-events: none;
   }
 
@@ -43,7 +40,6 @@
 .app__container {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   flex-direction: row;
 }

@@ -1,0 +1,263 @@
+$fuschia: #ff0081;
+$button-bg: $fuschia;
+$button-text-color: #fff;
+$baby-blue: #f8faff;
+
+.app__footer {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 52px;
+    background-image: (linear-gradient(to right, #0860cc, #be169d));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  .footer-text {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      color: #ff5468;
+    }
+  }
+}
+
+.app__footer-cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4em 2rem 2rem;
+
+  .app__footer-card {
+    min-width: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+
+    transition: all 0.3s ease-in-out;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.7rem;
+    }
+
+    p {
+      font-weight: 500;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+    &:hover {
+      box-shadow: 0 0 25px #fef4f5;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.app__footer-cards .app__footer-card:last-child {
+  background-color: #f2f7fb;
+}
+
+.app__footer-cards .app__footer-card:last-child:hover {
+  box-shadow: 0 0 25px #f2f7fb;
+}
+
+.app__footer-form {
+  width: 80%;
+  flex-direction: column;
+  margin: 1rem 2rem;
+
+  div {
+    width: 100%;
+
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+
+    transition: all 0.3s ease-in-out;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 7px;
+      background-color: #fff;
+
+      font-family: var(--font-base);
+      color: var(--secondary-color);
+      outline: none;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px var(--primary-color);
+    }
+  }
+  .bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $button-bg;
+    color: $button-text-color;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 140%;
+      height: 100%;
+      left: -20%;
+      z-index: -1000;
+      transition: all ease-in-out 0.5s;
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      display: none;
+      top: -75%;
+      background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(
+          circle,
+          transparent 20%,
+          $button-bg 20%,
+          transparent 30%
+        ),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(
+          circle,
+          transparent 10%,
+          $button-bg 15%,
+          transparent 20%
+        ),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%);
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+        15% 15%, 10% 10%, 18% 18%;
+      //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+    }
+
+    &:after {
+      display: none;
+      bottom: -75%;
+      background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(
+          circle,
+          transparent 10%,
+          $button-bg 15%,
+          transparent 20%
+        ),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%),
+        radial-gradient(circle, $button-bg 20%, transparent 20%);
+      background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+        20% 20%;
+      //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      background-color: darken($button-bg, 5%);
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+
+    &.animate {
+      &:before {
+        display: block;
+        animation: topBubbles ease-in-out 0.75s forwards;
+      }
+      &:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 0.75s forwards;
+      }
+    }
+  }
+
+  @keyframes topBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+  @keyframes bottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
