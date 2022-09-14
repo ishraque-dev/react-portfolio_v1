@@ -60,7 +60,7 @@ const Footer = () => {
             rel="noreferrer"
             className="p-text"
           >
-            ahamedesrak3@gmail
+            ahamedesrak3@gmail.com
           </a>
         </div>
         <div className="app__footer-card">
@@ -84,6 +84,7 @@ const Footer = () => {
             >
               <div className="app__flex">
                 <input
+                  required={true}
                   type="text"
                   className="p-text"
                   placeholder="Your Name"
@@ -92,6 +93,7 @@ const Footer = () => {
               </div>
               <div className="app__flex">
                 <input
+                  required={true}
                   type="email"
                   className="p-text"
                   placeholder="Your Email"
@@ -100,6 +102,7 @@ const Footer = () => {
               </div>
               <div>
                 <textarea
+                  required={true}
                   className="p-text"
                   name="message"
                   placeholder="Your Message"
@@ -121,7 +124,9 @@ const Footer = () => {
           </div>
         ) : (
           <div className=" footer-text">
-            <h3 className="head-text">Thank You For Getting in Touch</h3>
+            <h3 className="head-text" animate>
+              Thank You For Getting in Touch
+            </h3>
           </div>
         )}
       </div>

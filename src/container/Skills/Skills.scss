@@ -94,7 +94,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
   @media screen and (max-width: 900px) {
