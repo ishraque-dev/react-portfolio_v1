@@ -124,9 +124,7 @@ const Footer = () => {
           </div>
         ) : (
           <div className=" footer-text">
-            <h3 className="head-text" animate>
-              Thank You For Getting in Touch
-            </h3>
+            <h3 className="head-text">Thank You For Getting in Touch</h3>
           </div>
         )}
       </div>
